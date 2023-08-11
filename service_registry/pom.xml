@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	<groupId>com.peirisabhi.customer_registration</groupId>
-	<artifactId>service_registry</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>service_registry</name>
-	<description>Demo project for Spring Boot</description>
-	<properties>
-		<java.version>11</java.version>
-		<spring-cloud.version>2022.0.4</spring-cloud.version>
-		
-		<maven.compiler.target>8</maven.compiler.target>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.houari</groupId>
+    <artifactId>iamneo-production_21c5a91b-fc76-408a-aedf-14ced0fcbbfc</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <sonar.organization>iamneo-production</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.sources></sonar.sources>
         <sonar.tests></sonar.tests>
         <sonar.java.binaries>target</sonar.java.binaries>
-	</properties>
-	<dependencies>
-		<dependency>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.7.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- <dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
@@ -34,27 +30,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>${spring-cloud.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+		</dependency> -->
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-
+    </dependencies>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.7.0.1746</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
