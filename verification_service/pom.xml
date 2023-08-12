@@ -2,17 +2,20 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.houari</groupId>
+	<artifactId>iamneo-production_21c5a91b-fc76-408a-aedf-14ced0fcbbfc</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>verification_service</name>
+	<description>Demo project for Spring Boot</description>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.1.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> 
 	</parent>
-	<groupId>com.houari</groupId>
-	<artifactId>verification_service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>verification_service</name>
-	<description>Demo project for Spring Boot</description>
+	
+	
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -23,6 +26,8 @@
         <sonar.java.binaries>target</sonar.java.binaries>
 		<spring-cloud.version>2021.0.7</spring-cloud.version>
 	</properties>
+
+
 	<dependencies>
 	 	<dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -35,10 +40,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
@@ -49,11 +56,13 @@
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -74,7 +83,7 @@
 	</dependencyManagement>
 
 	<build>
-		<plugins>
+		<!-- <plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -87,7 +96,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-		</plugins>
+		</plugins> -->
 
 		<pluginManagement>
             <plugins>
