@@ -27,5 +27,12 @@ public class CustomerServiceImpl implements CustomerService{
 
         return customerRepository.save(customer).toDto(CustomerDto.class);
     }
+
+	@Override
+	public CustomerDto getCustomerVerificationByEmail(String email) {
+		
+        return customerRepository.findByEmail(email).orElse(null)
+        .toDto(CustomerDto.class);
+	}
     
 }

@@ -6,4 +6,6 @@ public interface CustomerService {
     
     CustomerDto verifiyCustomer(CustomerDto customerDto);
 
+    CustomerDto getCustomerVerificationByEmail(String email);
+
 }
