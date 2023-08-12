@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.houari</groupId>
-	<artifactId>iamneo-production_21c5a91b-fc76-408a-aedf-14ced0fcbbfc</artifactId>
+	<artifactId>verification_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>verification_service</name>
 	<description>Demo project for Spring Boot</description>
