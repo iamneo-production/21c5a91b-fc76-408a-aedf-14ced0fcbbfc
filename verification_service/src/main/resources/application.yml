@@ -1,0 +1,38 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: verification-service
+
+#   cloud:
+#     gateway:
+#       routes:
+#         - id: a-service
+#           uri: lb://A-SERVICE
+#           predicates:
+#             - Path=/a/**
+# #          filters:
+# #            - AuthenticationFilter
+
+#         - id: b-service
+#           uri: lb://B-SERVICE
+#           predicates:
+#             - Path=/b/**
+
+#         - id: identity-service
+#           uri: lb://IDENTITY-SERVICE
+#           predicates:
+#             - Path=/auth/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://127.0.0.1:8080/eureka/
