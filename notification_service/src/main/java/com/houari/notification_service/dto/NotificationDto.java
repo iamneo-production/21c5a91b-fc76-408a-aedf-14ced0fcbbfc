@@ -15,7 +15,7 @@ public class NotificationDto implements Transformer{
 
     private String notificationType;
 
-    private Date date;
+    private String date;
 
     private int customerId;
 }
