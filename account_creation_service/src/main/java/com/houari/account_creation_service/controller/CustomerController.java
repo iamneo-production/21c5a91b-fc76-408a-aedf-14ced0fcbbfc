@@ -37,7 +37,7 @@ public class CustomerController {
         return ResponseEntity.ok(customerService.getCustomerByEmail(email));
     }
     
-     @GetMapping()
+    @GetMapping()
     public ResponseEntity<List<CustomerDto>> getCustomers() {
         return ResponseEntity.ok(customerService.getCustomers());
     }
