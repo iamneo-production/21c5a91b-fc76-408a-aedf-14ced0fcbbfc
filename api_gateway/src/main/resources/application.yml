@@ -1,0 +1,38 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: API-GATEWAY
+
+  cloud:
+    gateway:
+      routes:
+        - id: verification-service
+          uri: lb://verification-service-service
+          predicates:
+            - Path=/api/verify-identity/**
+#          filters:
+#            - AuthenticationFilter
+
+        - id: notification-service
+          uri: lb://notification-service
+          predicates:
+            - Path=/api/notification/**
+
+        # - id: identity-service
+        #   uri: lb://IDENTITY-SERVICE
+        #   predicates:
+        #     - Path=/auth/**
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://127.0.0.1:8761/eureka/
